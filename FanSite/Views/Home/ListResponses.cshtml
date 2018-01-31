@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FanSite.Models.StoryResponse>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>Responses</title>
+</head>
+<body>
+    <div class="panel-body">
+        <h2>Here are the other stories by fans of Austin Rutledge</h2>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Story</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (FanSite.Models.StoryResponse r in Model)
+            {
+                    <tr>
+                        <td>@r.Title</td>
+                        <td>@r.Date</td>
+                        <td>@r.Story</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

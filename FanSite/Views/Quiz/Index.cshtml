@@ -1,0 +1,83 @@
+﻿@model FanSite.Models.QuizResponse
+@*
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!--<body>
+    <div class="panel">
+
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Title">Question 1:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Question 2:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Question 3:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Question 4:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Question 5:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+
+
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit Answers
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Controllers and Actions</title>
+    <link rel="stylesheet" href="@Url.Action("Index", "Example")" />
+</head>
+<body class="m-1 p-1">
+    <form method="post" asp-action="ReceiveForm">
+        <div class="form-group">
+            <label for="name">Question 1: How Old is Austin?</label>
+            <input class="form-control" name="q1" />
+        </div>
+        <div class="form-group">
+            <label for="name">Question 2: What year was Austin Born?</label>
+            <input class="form-control" name="q2" />
+        </div>
+        <div class="form-group">
+            <label for="name">Question 3: What does Austin Prefer to do 1) Go fishing, 2) Go to the range, or 3) Sit at home playing video games like a nerd?</label>
+            <input class="form-control" name="q3" />
+        </div>
+        <div class="form-group">
+            <label for="name">Question 4: How Many Little Monsters (kids) Does Austin Have?</label>
+            <input class="form-control" name="q4" />
+        </div>
+        <div class="form-group">
+            <label for="name">Question 5: How Many Piercings Does Austin Have?</label>
+            <input class="form-control" name="q5" />
+        </div>
+
+        <button class="btn btn-primary center-block" type="submit">Submit</button>
+    </form>
+</body>
+</html>

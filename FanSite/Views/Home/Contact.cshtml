@@ -1,17 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Contact";
+﻿@model FanSite.Models.StoryResponse
+@{
+    Layout = null;
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>RSVP</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Title">Story Title:</label>
+                    <input class="form-control" asp-for="Title" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date">Story Date:</label>
+                    <input type="date" class="form-control" asp-for="Date" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Story">Your story:</label>
+                    <textarea rows="4" cols="50" class="form-control" asp-for="Story"></textarea>
+                </div>
+               
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Submit RSVP
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
